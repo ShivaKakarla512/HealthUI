@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <title>Samokan Health Application</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header pr-3">
+    <iframe src="header.html"></iframe>
+  </div>
+
+  <div class="container">
+    <h1 id="drug"></h1>
+    <h1 id="sym"></h1>
+  </div>
+
+  <div id="root"></div>
+
+  <script>
+    function processForm() {
+      var parameters = location.search.substring(1).split("&");
+      var temp1 = parameters[0].split("=");
+      var temp2 = parameters[1].split("=");
+      
+      drug = (unescape(temp1[1]).split("+")).join(" ");
+      drug = drug.charAt(0).toUpperCase() + drug.slice(1);
+
+      sym = (unescape(temp2[1]).split("+")).join(" ");
+      sym = sym.charAt(0).toUpperCase() + sym.slice(1);
+
+      document.getElementById("drug").innerHTML = drug;
+      document.getElementById("sym").innerHTML = sym;
+    }
+    processForm();
+  </script>
+
+  <div class="footer pt-5">
+    <iframe src="footer.html"></iframe>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

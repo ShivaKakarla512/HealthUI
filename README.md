@@ -1,2 +1,5 @@
-# HealthUI
-A website that, based on user input, can fetch raw data using specific medical API's, which are then formatted and displayed to the user in a friendly manner.
+# Studio Ghibli App
+
+- [View the tutorial](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript)
+
+- [View the demo](https://taniarascia.github.io/sandbox/ghibli/)
